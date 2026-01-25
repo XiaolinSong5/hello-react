@@ -3,8 +3,11 @@ import Accordion from './Accordion';
 export function App() {
   return (
   <div>
-    <Accordion> Some hard code sring </Accordion>
-    <Accordion>new accordion</Accordion>
+    <Accordion labelText="My profile">
+      <strong>My first accordion</strong>
+      <p>My p tag</p>
+    </Accordion>
+    <Accordion labelText="My hobbies">new accordion</Accordion>
   </div>
 );
 }
