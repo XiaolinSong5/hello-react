@@ -6,7 +6,9 @@ export default function Accordion(props) {
     console.log({props});
     const handleClick = () => {
         console.log('This was clicked');
-        setOpen(true);
+        setOpen((prevValue) => {
+            return !prevValue;
+        });
     }
 //return (<div>this is an accordion</div>);
     return (
