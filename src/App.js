@@ -4,7 +4,9 @@ import {useState} from "react";
 export function App() {
   const [openAccordionId, setOpenAccordionId] = useState(null);
   const handleAccordionClick = (accordionId) => {
-    setOpenAccordionId(accordionId);
+    setOpenAccordionId((prevValue) => {
+      return prevValue === accordionId ? null : accordionId;
+    });
   }
   return (
   <div>
